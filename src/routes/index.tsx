@@ -99,45 +99,48 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
-      <img
-        src={heroOutlet}
-        alt="PIX EAT outlet at night in Malviya Nagar"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
-      />
-      {/* glow + smoke vignettes */}
+    <section id="top" className="relative h-[100svh] min-h-[640px] w-full overflow-hidden flex items-center">
+      {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black" />
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[40vw] h-[40vw] rounded-full bg-yellow/20 blur-[120px] animate-flicker" />
 
-      <div className="relative z-10 h-full flex flex-col justify-end px-4 md:px-10 pb-20 md:pb-28 max-w-7xl mx-auto">
-        <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-yellow mb-4 md:mb-6">
-          Malviya Nagar · Open till 2AM
-        </p>
-        <h1 className="text-display text-[14vw] md:text-[8vw] leading-[0.85] max-w-5xl">
-          Delhi's late <br />
-          night <span className="text-yellow">craving</span> spot
-        </h1>
-        <p className="mt-6 text-lg md:text-2xl text-muted-foreground font-mono">
-          Burgers · Wraps · Fries · Shakes
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={ZOMATO}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-yellow text-ink font-display uppercase text-lg md:text-xl px-7 py-4 rounded-full hover:scale-[1.03] transition yellow-glow"
-          >
-            Order on Zomato →
-          </a>
-          <a
-            href="#menu"
-            className="border border-white/20 text-foreground font-display uppercase text-lg md:text-xl px-7 py-4 rounded-full hover:bg-white/5 transition"
-          >
-            View Menu
-          </a>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="flex-1 flex flex-col justify-center">
+          <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-yellow mb-4 md:mb-6">
+            Malviya Nagar · Open till 2AM
+          </p>
+          <h1 className="text-display text-[14vw] md:text-[8vw] leading-[0.85] max-w-5xl">
+            Delhi's late <br />
+            night <span className="text-yellow">craving</span> spot
+          </h1>
+          <p className="mt-6 text-lg md:text-2xl text-muted-foreground font-mono">
+            Burgers · Wraps · Fries · Shakes
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={ZOMATO}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-yellow text-ink font-display uppercase text-lg md:text-xl px-7 py-4 rounded-full hover:scale-[1.03] transition yellow-glow"
+            >
+              Order on Zomato →
+            </a>
+            <a
+              href="#menu"
+              className="border border-white/20 text-foreground font-display uppercase text-lg md:text-xl px-7 py-4 rounded-full hover:bg-white/5 transition"
+            >
+              View Menu
+            </a>
+          </div>
+        </div>
+
+        <div className="shrink-0 hidden md:block">
+          <img
+            src={heroOutlet}
+            alt="PIX EAT outlet at night in Malviya Nagar"
+            className="w-[10cm] h-[10cm] object-cover rounded-3xl border-2 border-yellow/30 yellow-glow animate-slow-zoom"
+          />
         </div>
       </div>
     </section>
