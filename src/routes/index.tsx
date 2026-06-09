@@ -11,23 +11,6 @@ import { MoodPicker } from "@/components/MoodPicker";
 import { HungryButton } from "@/components/HungryButton";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "PIX EAT — Delhi's Late Night Craving Spot" },
-      {
-        name: "description",
-        content:
-          "Burgers, wraps, fries and shakes in Malviya Nagar. Fresh, fast, affordable. Open late.",
-      },
-      { property: "og:title", content: "PIX EAT — Delhi After Dark" },
-      {
-        property: "og:description",
-        content: "Delhi's late night craving spot. Burgers • Wraps • Fries • Shakes.",
-      },
-      { property: "og:image", content: heroOutlet },
-      { name: "twitter:image", content: heroOutlet },
-    ],
-  }),
   component: Index,
 });
 
