@@ -12,5 +12,5 @@ export default defineConfig({
   resolve: {
     dedupe: ["react", "react-dom", "@tanstack/react-router", "@tanstack/react-start"],
   },
-  plugins: [tanstackStart(), tailwindcss(), tsConfigPaths(), viteReact()],
+  plugins: [tanstackStart(), tailwindcss(), tsConfigPaths()],
 });
